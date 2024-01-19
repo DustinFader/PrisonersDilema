@@ -62,11 +62,13 @@ const games = (player1Act, player2Act) => {
     // Reverse true to false and vice versa with a percentage of error flipping it.
     let player1Seen = player1Act.alg(player2Act);
     let player2Seen = player2Act.alg(player1Act);
+    // refered by copilot.
     if (Math.random() < error) {
       player1Seen = !player1Seen;
       player2Seen = !player2Seen;
     }
-
+  // ------------------------------
+    
     // both cooperate
     if (player1Seen && player2Seen) {
       score[0] += 3;
